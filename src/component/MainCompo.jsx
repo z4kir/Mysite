@@ -18,34 +18,7 @@ const MainCompo = () => {
     <div className="my-2">
       <Navbar />
       <MDBContainer fluid>
-        <MDBRow className="my-2" center>
-          <MDBCol md={3} center>
-            <MDBCard>
-              <MDBCardHeader
-                style={{ fontSize: "2rem" }}
-                className=" fw-bold text-center"
-              >
-                Personal Info
-              </MDBCardHeader>
-              <MDBCardBody className="justify-content-center">
-                <LeftNav />
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-          <MDBCol md={7} center>
-            <MDBCard>
-              <MDBCardBody>
-                <Outlet />
-              </MDBCardBody>
-            </MDBCard>
-          </MDBCol>
-          {/* <MDBCol center><MDBCard>
-            <MDBCardHeader></MDBCardHeader>
-            <MDBCardBody>
-              left
-            </MDBCardBody>
-          </MDBCard></MDBCol> */}
-        </MDBRow>
+<Outlet/>
       </MDBContainer>
       <Footer />
     </div>
