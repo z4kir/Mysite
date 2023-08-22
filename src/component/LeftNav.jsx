@@ -3,7 +3,7 @@ import React from "react";
 
 const LeftNav = () => {
   return (
-    <div className="text-center">
+    <div className="text-center" >
       <img
         style={{ height: 200, width: 200 }}
         src="zakir.jpg"
@@ -12,7 +12,8 @@ const LeftNav = () => {
       />
       <h2>Zakir Shaikh</h2>
       <h6 style={{ color: "grey" }}>Full Stack Developer</h6>
-      <MDBTable>
+      <div style={{overflow:"auto"}}>
+      <MDBTable >
         <MDBTableBody>
           <tr>
             <th>Mobile</th>
@@ -24,6 +25,7 @@ const LeftNav = () => {
           </tr>
         </MDBTableBody>
       </MDBTable>
+      </div>
     </div>
   );
 };

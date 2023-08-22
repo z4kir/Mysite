@@ -1,0 +1,9 @@
+.social-media-btns{
+    margin: 0.25rem!important;
+    color: white;
+    border: none;
+    border-radius: 49px;
+    /* font-size: 22px; */
+    width: 35px;
+    height: 35px;
+}
