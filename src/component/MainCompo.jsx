@@ -15,10 +15,10 @@ import LeftNav from "./LeftNav";
 
 const MainCompo = () => {
   return (
-    <div className="my-2">
-      <Navbar />
-      <MDBContainer fluid>
-<Outlet/>
+    <div className="">
+      <Navbar  />
+      <MDBContainer fluid  className="body-theme p-0">
+<Outlet />
       </MDBContainer>
       <Footer />
     </div>

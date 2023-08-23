@@ -9,8 +9,8 @@ import {
 
 export default function Footer() {
   return (
-    <MDBFooter className="bg-light text-center text-white mt-2">
-      <MDBContainer className="p-4 pb-0">
+    <MDBFooter className="sec-theme nav-shadow  text-center text-white">
+      <MDBContainer  className=" p-4 pb-0">
         <section className="mb-4">
           <button
             floating
@@ -110,8 +110,8 @@ export default function Footer() {
       </MDBContainer>
 
       <div
-        className="text-center p-3"
-        style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
+        className="text-center p-3 base-theme"
+        // style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
         © 2020 Copyright:
         <a className="text-white" href="https://mdbootstrap.com/">

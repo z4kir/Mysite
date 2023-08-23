@@ -9,7 +9,7 @@ import React from "react";
 
 const ProjectCompo = () => {
   return (
-    <div>
+    <div style={{height:"70vh"}}>
       {/* <MDBCard> */}
         <MDBCardBody>
           <MDBTable>

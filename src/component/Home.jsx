@@ -17,7 +17,7 @@ import LeftNav from "./LeftNav";
 
 const Home = () => {
   return (
-    <div>
+    <div className="pb-2">
       <div>
         <MDBCarousel
           // style={{ height: "70vh" }}
@@ -62,7 +62,7 @@ const Home = () => {
         </MDBCarousel>
       </div>
       <MDBContainer fluid className="p-0">
-        <MDBRow className="my-2">
+        <MDBRow className="m-0" >
           <MDBCol md={4} >
             <MDBCard>
               <MDBCardHeader

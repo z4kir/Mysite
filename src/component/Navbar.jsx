@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   MDBContainer,
   MDBNavbar,
@@ -16,14 +16,17 @@ import {
   MDBCollapse,
 } from "mdb-react-ui-kit";
 import { useNavigate } from "react-router-dom";
+import ZAKContext from "../Context";
 
 const Navbar = () => {
+
+  const {setNavHeight} = useContext(ZAKContext)
   const navigate = useNavigate();
   const [showBasic, setShowBasic] = useState(false);
 
   return (
     <div>
-      <MDBNavbar expand="lg" light bgColor="light">
+      <MDBNavbar className="base-theme nav-shadow text-light" expand="lg" light >
         <MDBContainer fluid>
           <MDBNavbarBrand href="#" onClick={()=>{navigate("/")}} >skZak</MDBNavbarBrand>
 
