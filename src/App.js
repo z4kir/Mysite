@@ -32,7 +32,7 @@ function App() {
         setFooterHeight: setFooterHeight,
       }}
     >
-      <RouterProvider router={router} />;
+      <RouterProvider router={router} />
     </ZAKContext.Provider>
   );
 }

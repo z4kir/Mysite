@@ -27,39 +27,7 @@ export default function Footer() {
           >
             <MDBIcon fab icon="facebook-f" />
           </button>
-        
 
-          <button
-            floating
-            className="m-1 social-media-btns"
-            style={{ backgroundColor: "#55acee" }}
-            href="#!"
-            role="button"
-            onClick={() => {
-              window.open(
-                "https://linkedin.com/in/zakir-shaikh-b805871ba",
-                "_blank"
-              );
-            }}
-          >
-            <MDBIcon fab icon="twitter" />
-          </button>
-
-          <button
-            floating
-            className="m-1 social-media-btns"
-            style={{ backgroundColor: "#dd4b39" }}
-            href="#!"
-            role="button"
-            onClick={() => {
-              window.open(
-                "https://linkedin.com/in/zakir-shaikh-b805871ba",
-                "_blank"
-              );
-            }}
-          >
-            <MDBIcon fab icon="google" />
-          </button>
           <button
             floating
             className="m-1 social-media-btns"
@@ -113,9 +81,9 @@ export default function Footer() {
         className="text-center p-3 base-theme"
         // style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2020 Copyright:
+        © 2023 Copyright:
         <a className="text-white" href="https://mdbootstrap.com/">
-          MDBootstrap.com
+          skzak.online
         </a>
       </div>
     </MDBFooter>

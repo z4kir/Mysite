@@ -29,3 +29,38 @@
     box-shadow: 0px 0px 9px 2px grey;
     z-index: 1;
 }
+.logo-shadow{
+    box-shadow: -1px 2px 6px 1px black;
+    z-index: 1;
+}
+
+
+.nav-links{
+    color:white!important ;
+}
+
+.tab-overflow{
+    overflow-x:auto
+}
+
+
+@media screen and (min-width:700px){
+    .logo-shadow:hover{
+        box-shadow: -1px 2px 9px 1px black;
+        transform: scale(1.2);
+        z-index: 1;
+        transition: all 5ms linear;
+    }
+    .nav-links:hover{
+        color:white!important ;
+        transform: scale(1.2);
+        transition: all 5ms linear;
+    }
+}
+
+@media screen and (max-width:700px){
+    .tab-overflow{
+        overflow-x:scroll
+    }
+}
+

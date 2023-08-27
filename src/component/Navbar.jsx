@@ -28,7 +28,7 @@ const Navbar = () => {
     <div>
       <MDBNavbar className="base-theme nav-shadow text-light" expand="lg" light >
         <MDBContainer fluid>
-          <MDBNavbarBrand href="#" onClick={()=>{navigate("/")}} >skZak</MDBNavbarBrand>
+          <MDBNavbarBrand href="#" onClick={()=>{navigate("/")}} ><img className="logo-shadow" height={"40px"} src="images/logo.png"/></MDBNavbarBrand>
 
           <MDBNavbarToggler
             aria-controls="navbarSupportedContent"
@@ -40,14 +40,14 @@ const Navbar = () => {
           </MDBNavbarToggler>
 
           <MDBCollapse navbar show={showBasic}>
-            <MDBNavbarNav className="mr-auto mb-2 mb-lg-0">
+            <MDBNavbarNav className="mr-auto mb-2 mb-lg-0 ">
               <MDBNavbarItem>
-                <MDBNavbarLink onClick={()=>{navigate("/")}}  active aria-current="page" href="#">
+                <MDBNavbarLink onClick={()=>{navigate("/")}} className="nav-links"  active aria-current="page" href="#">
                   Home
                 </MDBNavbarLink>
               </MDBNavbarItem>
               <MDBNavbarItem>
-                <MDBNavbarLink onClick={()=>{navigate("/projects")}} active aria-current="page" href="#">
+                <MDBNavbarLink onClick={()=>{navigate("/projects")}} className="nav-links" active aria-current="page" href="#">
                   Project
                 </MDBNavbarLink>
               </MDBNavbarItem>
