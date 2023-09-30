@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import {
   MDBFooter,
   MDBContainer,
@@ -6,14 +6,25 @@ import {
   MDBCol,
   MDBIcon,
 } from "mdb-react-ui-kit";
+import ZAKContext from "../Context";
 
 export default function Footer() {
+
+  const {setFooterHeight} = useContext(ZAKContext)
+  const refFooter = useRef(0)
+
+  useEffect(() => {
+    if (refFooter.current) {
+      console.log(refFooter.current?.getBoundingClientRect().height);
+      setFooterHeight(Math.ceil(refFooter.current?.getBoundingClientRect().height))
+    }
+      }, [])
   return (
-    <MDBFooter className="sec-theme nav-shadow  text-center text-white">
-      <MDBContainer  className=" p-4 pb-0">
+    <MDBFooter ref={refFooter} className="sec-theme nav-shadow  text-center text-white">
+      <MDBContainer className=" p-4 pb-0">
         <section className="mb-4">
           <button
-            floating
+            floating="true"
             className="m-1 social-media-btns"
             style={{ backgroundColor: "#3b5998" }}
             href="#!"
@@ -29,24 +40,20 @@ export default function Footer() {
           </button>
 
           <button
-            floating
+        floating="true"
             className="m-1 social-media-btns"
             style={{ backgroundColor: "#ac2bac" }}
             href="#!"
             role="button"
             onClick={() => {
-              window.open(
-                "https://www.instagram.com/sk_zak786/",
-                "_blank"
-              );
+              window.open("https://www.instagram.com/sk_zak786/", "_blank");
             }}
           >
-            
             <MDBIcon fab icon="instagram" />
           </button>
 
           <button
-            floating
+            floating="true"
             className="m-1 social-media-btns"
             type="button"
             style={{ backgroundColor: "#0082ca" }}
@@ -62,17 +69,32 @@ export default function Footer() {
           </button>
 
           <button
-            floating
+            floating="true"
             className="m-1 social-media-btns"
             style={{ backgroundColor: "#333333" }}
             href="#!"
             role="button"
-            onClick={()=>window.open(
-              "https://github.com/z4kir",
-              "_blank"
-            )}
+            onClick={() => window.open("https://github.com/z4kir", "_blank")}
           >
             <MDBIcon fab icon="github" />
+          </button>
+          <button
+            floating="true"
+            className="m-1 fiverr-btns"
+            href="#!"
+            role="button"
+            onClick={() =>
+              window.open(
+                "https://www.fiverr.com/users/zakirshaikh692",
+                "_blank"
+              )
+            }
+          >
+            <img
+              // onClick={() => window.open("https://github.com/z4kir", "_blank")}
+              className=" fiverr-img"
+              src="images/fiverr.png"
+            />
           </button>
         </section>
       </MDBContainer>

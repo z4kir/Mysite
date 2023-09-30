@@ -11,6 +11,8 @@ import Home from "./component/Home";
 import ProjectCompo from "./component/ProjectCompo";
 import ZAKContext from "./Context";
 import { useState } from "react";
+import AboutMe from "./component/AboutMe";
+import VideosCompo from "./component/VideosCompo";
 
 function App() {
   const [navHeight, setNavHeight] = useState(0);
@@ -18,8 +20,10 @@ function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
       <Route element={<MainCompo />}>
-        <Route path="/" element={<Home />} />
+        <Route path="/"  element={<Home />} />
         <Route path="/projects" element={<ProjectCompo />} />
+        <Route path="/about" element={<AboutMe />} />
+        <Route path="/video" element={<VideosCompo />} />
       </Route>
     )
   );

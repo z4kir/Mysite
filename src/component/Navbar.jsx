@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import {
   MDBContainer,
   MDBNavbar,
@@ -23,9 +23,18 @@ const Navbar = () => {
   const {setNavHeight} = useContext(ZAKContext)
   const navigate = useNavigate();
   const [showBasic, setShowBasic] = useState(false);
+  const refNav = useRef(0)
+
+  useEffect(() => {
+if (refNav.current) {
+  console.log(Math.floor(refNav.current?.getBoundingClientRect().height));
+  setNavHeight(Math.ceil(refNav.current?.getBoundingClientRect().height))
+}
+  }, [])
+  
 
   return (
-    <div>
+    <div ref={refNav}>
       <MDBNavbar className="base-theme nav-shadow text-light" expand="lg" light >
         <MDBContainer fluid>
           <MDBNavbarBrand href="#" onClick={()=>{navigate("/")}} ><img className="logo-shadow" height={"40px"} src="images/logo.png"/></MDBNavbarBrand>
@@ -49,6 +58,16 @@ const Navbar = () => {
               <MDBNavbarItem>
                 <MDBNavbarLink onClick={()=>{navigate("/projects")}} className="nav-links" active aria-current="page" href="#">
                   Project
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink onClick={()=>{navigate("/about")}} className="nav-links"  active aria-current="page" href="#">
+                  About Me
+                </MDBNavbarLink>
+              </MDBNavbarItem>
+              <MDBNavbarItem>
+                <MDBNavbarLink onClick={()=>{navigate("/video")}} className="nav-links"  active aria-current="page" href="#">
+                  Videos
                 </MDBNavbarLink>
               </MDBNavbarItem>
             </MDBNavbarNav>
