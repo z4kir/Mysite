@@ -65,7 +65,7 @@
 
 .fiverr-img {
   margin-bottom: 4px;
-  width: 20px;
+  width: 40px;
   border-radius: 50px;
 }
 .my-profession {
@@ -209,7 +209,89 @@
   filter: grayscale(0%);
 }
 
-@media screen and (min-width: 700px) {
+.typed-container {
+  /* display: inline-block; */
+  font-family: "arial";
+  font-size: 24px;
+}
+
+.typed {
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+  border-right: 2px solid;
+  height: 25px;
+  width: 20px;
+  height: 20px;
+  /* animation:2s typing  infinite ; */
+  /* animation-duration: 2.5s; */
+  /* animation-timing-function: steps(30, end); */
+  /* animation-fill-mode: both; */
+  /* animation-delay: 60s; */
+}
+
+
+
+@keyframes typing {
+  0%,40%,80% { display: none; }
+  100% { display
+    :block; }
+}
+
+.string::before{
+  position: absolute;
+  top: -5px;
+  width: 10px;
+  height: 10px; border-radius: 50%;
+  background-color: var(--primary);
+  transform: rotate(-15deg);
+  content: " ";
+  }
+  
+.string{
+display:flex;
+justify-content: center;
+align-items: end;
+position: absolute;
+top: 0;
+left: 99%;
+width:3px;
+height: 200px;
+background-color: black;
+z-index:50000;
+transform-origin: top;
+transform: rotate(15deg);
+animation: stringanimation 3s infinite alternate;
+}
+
+/* .string::after{
+  position: absolute;
+  display: flex;
+  top: 150px;
+
+  height: 20px;
+  background-color: var(--primary);
+  content: "Let's GO";
+ 
+  } */
+  @media screen and (min-width: 700px) {
+  @keyframes stringanimation {
+    0%{ transform: rotate(20deg) }
+    100%  { transform: rotate(-20deg)  }
+    
+  }
+}
+
+@media screen and (max-width: 700px) {
+  @keyframes stringanimation {
+    0%{ transform: rotate(5deg) }
+    100%  { transform: rotate(0deg)  }
+    
+  }
+}
+
+  
+
+@media screen and (max-width: 800px) {
   .logo-shadow:hover {
     box-shadow: 1px 2px 4px 0px black;
     transform: scale(1.2);
@@ -219,6 +301,7 @@
   .nav-links:hover {
     color: white !important ;
     transform: scale(1.2);
+    transform-origin: 0%;
     transition: all 5ms linear;
   }
 }
@@ -226,5 +309,21 @@
 @media screen and (max-width: 700px) {
   .tab-overflow {
     overflow-x: scroll;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .logo-shadow:hover {
+    box-shadow: 1px 2px 4px 0px black;
+    transform: scale(1.2);
+    z-index: 1;
+ 
+    transition: all 5ms linear;
+  }
+  .nav-links:hover {
+    color: white !important ;
+    transform: scale(1.2);
+    transform-origin: 50%;
+    transition: all 5ms linear;
   }
 }

@@ -93,7 +93,7 @@ export default function Footer() {
             <img
               // onClick={() => window.open("https://github.com/z4kir", "_blank")}
               className=" fiverr-img"
-              src="images/fiverr.png"
+              src="images/fiverr.svg"
             />
           </button>
         </section>

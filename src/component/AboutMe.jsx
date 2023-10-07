@@ -7,6 +7,7 @@ const AboutMe = () => {
 
   const [minH, setminH] = useState(0)
   const [loading, setLoading] = useState(true)
+  const [imgLoading, setImgLoading] = useState(true)
   useEffect(() => {
     let h=window.innerHeight-navHeight-footerHeight
     console.log(h,window.screen.availHeight,navHeight)
@@ -18,10 +19,11 @@ const AboutMe = () => {
       <div style={{minHeight:minH}} className="container ">
       <div className="text-center p-2 " >
         <img
-          style={{ height: 200, width: 200,    filter: "hue-rotate(45deg)" }}
+          style={{ height: 200, width: 200, opacity:imgLoading?0:1}}
           src="images/zakir1.jpg"
           className=" box  img-fluid rounded img-shadow"
           alt="Townhouses and Skyscrapers"
+          onLoad={()=>{setImgLoading(false)}}
         />
         <div className="my-name-body mt-2" >
         <h2 className="my-name">Zakir Shaikh</h2>
