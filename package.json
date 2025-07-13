@@ -1,12 +1,14 @@
 {
   "name": "zakir-shaikh",
-  "version": "0.1.0",
+  "version": "0.1.8",
   "private": true,
+  "homepage": "https://z4kir.github.io/z4kir",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "express": "^4.18.2",
+    "gh-pages": "^6.3.0",
     "localforage": "^1.10.0",
     "match-sorter": "^6.3.1",
     "mdb-react-ui-kit": "^6.2.0",
@@ -23,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

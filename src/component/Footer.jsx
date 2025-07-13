@@ -78,24 +78,6 @@ export default function Footer() {
           >
             <MDBIcon fab icon="github" />
           </button>
-          <button
-            floating="true"
-            className="m-1 fiverr-btns"
-            href="#!"
-            role="button"
-            onClick={() =>
-              window.open(
-                "https://www.fiverr.com/users/zakirshaikh692",
-                "_blank"
-              )
-            }
-          >
-            <img
-              // onClick={() => window.open("https://github.com/z4kir", "_blank")}
-              className=" fiverr-img"
-              src="images/fiverr.svg"
-            />
-          </button>
         </section>
       </MDBContainer>
 
@@ -103,9 +85,9 @@ export default function Footer() {
         className="text-center p-3 base-theme"
         // style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        © 2023 Copyright:
-        <a className="text-white" href="https://mdbootstrap.com/">
-          skzak.online
+        © 2023 Copyright:{" "}
+        <a className="text-white"  href="https://github.com/z4kir">
+           github.com/z4kir
         </a>
       </div>
     </MDBFooter>
