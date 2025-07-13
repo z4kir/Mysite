@@ -2,7 +2,7 @@
   "name": "zakir-shaikh",
   "version": "0.1.8",
   "private": true,
-  "homepage": "https://z4kir.github.io/z4kir",
+  "homepage": "https://z4kir.github.io/Mysite",
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
